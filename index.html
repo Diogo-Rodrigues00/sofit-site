@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Academia Sô Fit · Uberlândia</title>
+  <meta name="description" content="Musculação, spinning e cardio em Uberlândia. Aceitamos Gympass e TotalPass. Agende sua aula experimental pelo WhatsApp.">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;0,800;0,900;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Faixa de campanha (ex.: Novembro Azul). Fica escondida até a planilha ligar uma campanha. -->
+  <div id="campanha" class="campanha" hidden>
+    <div class="container campanha__inner">
+      <p><strong id="campanha-nome"></strong> <span id="campanha-msg"></span></p>
+      <a id="campanha-link" class="campanha__link" href="#" hidden>Saiba mais</a>
+    </div>
+  </div>
+
+  <header class="topo">
+    <div class="container topo__inner">
+      <a href="#inicio" class="marca" aria-label="Academia Sô Fit, início">
+        <span class="marca__logo">SF</span>
+        <span class="marca__nome">ACADEMIA SÔ FIT</span>
+      </a>
+      <nav class="menu" aria-label="Seções">
+        <a href="#objetivo">Seu objetivo</a>
+        <a href="#horarios">Horários</a>
+        <a href="#planos">Planos</a>
+        <a href="#contato">Contato</a>
+        <a class="btn btn--vermelho btn--peq" data-wa="" href="#">Aula experimental</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="inicio" class="container hero">
+      <div class="hero__texto">
+        <p class="status"><span class="status__ponto" id="status-ponto"></span><span id="status-texto">Carregando horário…</span></p>
+        <h1 class="hero__titulo">Treino<br>de verdade,<br><span class="vermelho">sô.</span></h1>
+        <p class="hero__sub">Musculação, spinning e cardio num lugar sem frescura, com professor por perto e gente que treina sério. Aceitamos Gympass e TotalPass.</p>
+        <div class="botoes">
+          <a class="btn btn--vermelho" data-wa="" href="#">Agendar aula experimental</a>
+          <a class="btn btn--contorno" href="#objetivo">Descobrir meu treino</a>
+        </div>
+      </div>
+      <div class="hero__lado">
+        <div class="selo">
+          <span class="selo__faixa selo__faixa--1" aria-hidden="true"></span>
+          <span class="selo__faixa selo__faixa--2" aria-hidden="true"></span>
+          <div class="selo__circulo">
+            <span class="selo__sf">SF</span>
+            <span class="selo__nome">— ACADEMIA SÔ FIT —</span>
+          </div>
+        </div>
+        <div class="foto foto--hero">[FOTO DA SALA DE MUSCULAÇÃO]</div>
+      </div>
+    </section>
+
+    <div class="letreiro" aria-hidden="true">
+      <div class="letreiro__trilho">
+        <span>MUSCULAÇÃO ✦ SPINNING ✦ CARDIO ✦ GYMPASS E TOTALPASS ✦ AULA EXPERIMENTAL ✦&nbsp;</span>
+        <span>MUSCULAÇÃO ✦ SPINNING ✦ CARDIO ✦ GYMPASS E TOTALPASS ✦ AULA EXPERIMENTAL ✦&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- AVISOS: preenchido pela planilha. Some sozinho se não houver aviso ativo. -->
+    <section id="avisos" class="secao" hidden>
+      <div class="container">
+        <div class="secao__cabeca">
+          <h2 class="titulo">Fique<br>ligado</h2>
+          <p class="secao__apoio">Avisos, eventos e novidades da Sô Fit.</p>
+        </div>
+        <div id="avisos-lista" class="grade grade--avisos"></div>
+      </div>
+    </section>
+
+    <!-- OBJETIVO -->
+    <section id="objetivo" class="secao">
+      <div class="container">
+        <div class="secao__cabeca">
+          <h2 class="titulo">Qual é o seu<br>objetivo?</h2>
+          <p class="secao__apoio">Escolha um e a gente te mostra por onde começar. A mensagem do WhatsApp já sai pronta.</p>
+        </div>
+        <div class="grade grade--objetivos">
+          <button type="button" class="objetivo" data-objetivo="massa" aria-pressed="false">
+            <span class="objetivo__titulo">Ganhar massa</span>
+            <span class="objetivo__sub">Força e hipertrofia</span>
+          </button>
+          <button type="button" class="objetivo" data-objetivo="emagrecer" aria-pressed="false">
+            <span class="objetivo__titulo">Emagrecer</span>
+            <span class="objetivo__sub">Queimar e ganhar fôlego</span>
+          </button>
+          <button type="button" class="objetivo" data-objetivo="zero" aria-pressed="false">
+            <span class="objetivo__titulo">Começar do zero</span>
+            <span class="objetivo__sub">Nunca treinei ou estou voltando</span>
+          </button>
+        </div>
+        <div id="resultado" class="resultado" hidden aria-live="polite">
+          <div class="resultado__texto">
+            <span class="rotulo vermelho">SEU COMEÇO NA SÔ FIT</span>
+            <span class="resultado__titulo" id="resultado-titulo"></span>
+            <span class="resultado__desc" id="resultado-desc"></span>
+          </div>
+          <a class="btn btn--vermelho" id="resultado-link" href="#">Chamar no WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODALIDADES -->
+    <section id="modalidades" class="secao secao--borda">
+      <div class="container">
+        <h2 class="titulo">Modalidades</h2>
+        <div class="grade grade--3">
+          <article class="card">
+            <span class="card__num">01</span>
+            <h3 class="card__titulo">Musculação</h3>
+            <p>Sala completa pra força e hipertrofia, com orientação de professor pra montar e ajustar seu treino.</p>
+            <div class="foto">[FOTO]</div>
+          </article>
+          <article class="card">
+            <span class="card__num">02</span>
+            <h3 class="card__titulo">Spinning</h3>
+            <p>Aula coletiva na bike, com música alta e ritmo puxado. Vagas por agendamento no app Next Fit, liberado 2h antes da aula.</p>
+            <div class="foto">[FOTO]</div>
+          </article>
+          <article class="card">
+            <span class="card__num">03</span>
+            <h3 class="card__titulo">Cardio</h3>
+            <p>Aula de condicionamento com o Prof. Diogo, toda quarta às 18:20. Venha preparado pra suar.</p>
+            <div class="foto">[FOTO]</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HORÁRIOS -->
+    <section id="horarios" class="secao secao--clara">
+      <div class="container">
+        <div class="secao__cabeca">
+          <h2 class="titulo">Horários</h2>
+          <p class="secao__apoio">O dia de hoje já vem selecionado.</p>
+        </div>
+        <div class="abas-dias" role="tablist" aria-label="Dias da semana" id="abas-dias"></div>
+        <div class="agenda" id="agenda" role="tabpanel"></div>
+      </div>
+    </section>
+
+    <!-- PLANOS -->
+    <section id="planos" class="secao">
+      <div class="container">
+        <div class="secao__cabeca">
+          <h2 class="titulo">Como você<br>quer entrar?</h2>
+          <div class="alternador" role="tablist" aria-label="Forma de entrada">
+            <button type="button" role="tab" aria-selected="true" aria-controls="painel-direto" id="aba-direto">Plano Sô Fit</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="painel-apps" id="aba-apps">Gympass / TotalPass</button>
+          </div>
+        </div>
+
+        <div id="painel-direto" role="tabpanel" aria-labelledby="aba-direto" class="grade grade--3">
+          <div class="plano">
+            <span class="rotulo">MENSAL</span>
+            <span class="plano__preco">[R$ —]</span>
+            <span class="plano__obs">por mês</span>
+          </div>
+          <div class="plano plano--destaque">
+            <span class="rotulo">TRIMESTRAL · MAIS ESCOLHIDO</span>
+            <span class="plano__preco">[R$ —]</span>
+            <span class="plano__obs">por mês, no plano de 3 meses</span>
+          </div>
+          <div class="plano">
+            <span class="rotulo">SEMESTRAL</span>
+            <span class="plano__preco">[R$ —]</span>
+            <span class="plano__obs">por mês, no plano de 6 meses</span>
+          </div>
+        </div>
+
+        <div id="painel-apps" role="tabpanel" aria-labelledby="aba-apps" class="grade grade--3" hidden>
+          <div class="passo">
+            <span class="passo__num">1</span>
+            <h3>Abra o app</h3>
+            <p>Entre no Gympass (Wellhub) ou no TotalPass. Plano mínimo aceito: [CONFIRMAR].</p>
+          </div>
+          <div class="passo">
+            <span class="passo__num">2</span>
+            <h3>Busque a Sô Fit</h3>
+            <p>Procure por Academia Sô Fit na lista de academias perto de você.</p>
+          </div>
+          <div class="passo">
+            <span class="passo__num">3</span>
+            <h3>Faça o check-in</h3>
+            <p>Chegou, fez o check-in e já pode treinar. Para o spinning, há uma taxa adicional de R$ 30 por mês.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESTRUTURA -->
+    <section id="estrutura" class="secao secao--borda">
+      <div class="container">
+        <h2 class="titulo">A estrutura</h2>
+        <div class="grade grade--4">
+          <div class="foto foto--alta">[FOTO · MUSCULAÇÃO]</div>
+          <div class="foto foto--alta">[FOTO · SALA DE BIKE]</div>
+          <div class="foto foto--alta">[FOTO · RECEPÇÃO]</div>
+          <div class="foto foto--alta">[FOTO · EQUIPE]</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="contato">
+      <div class="container">
+        <h2 class="contato__titulo">Bora treinar?</h2>
+        <div class="contato__linha">
+          <div class="contato__infos">
+            <div><span class="rotulo">ENDEREÇO</span><span>[Av. Rural, 1580, Jardim Brasília]<br>Uberlândia – MG</span></div>
+            <div><span class="rotulo">FUNCIONAMENTO</span><span id="funcionamento-texto"></span></div>
+            <div><span class="rotulo">INSTAGRAM</span><a href="https://instagram.com/academia_sofit" target="_blank" rel="noopener">@academia_sofit</a></div>
+          </div>
+          <a class="btn btn--branco" data-wa="" href="#">Chamar no WhatsApp</a>
+        </div>
+        <div class="rodape">
+          <span>Academia Sô Fit · Uberlândia – MG</span>
+          <span>Aceitamos Gympass e TotalPass</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Botão flutuante do WhatsApp -->
+  <a class="wa-flutuante" data-wa="" href="#" aria-label="Chamar a Sô Fit no WhatsApp">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.5 7.4L3 20.5l1.6-5.3A8.5 8.5 0 1 1 21 11.5z"/></svg>
+  </a>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
