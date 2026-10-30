@@ -12,7 +12,7 @@ window.SOFIT = {
   // ID da planilha do Google com os avisos e campanhas.
   // É o trecho entre /d/ e /edit no link da planilha.
   // Enquanto estiver vazio, o site usa os dados de "exemplo" lá embaixo.
-  planilhaId: '',
+  planilhaId: '1NRb3M9lQruqZ6lICOxaUzU7rbebboNsnKDXKGLnoDxA',
 
   // Horário de funcionamento (0 = domingo ... 6 = sábado).
   // [abre, fecha] em horas. 5.5 = 05:30. null = fechado.
