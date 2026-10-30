@@ -96,6 +96,18 @@ h1, h2, h3, p { margin: 0; }
 .foto--hero { min-height: 180px; }
 .foto--alta { min-height: 280px; }
 
+/* Fotos de verdade: preenchem o espaço sem distorcer (object-fit: cover) */
+.foto-img { display: block; width: 100%; height: auto; object-fit: cover; background: var(--preto-2); margin-top: auto; }
+.foto-img--larga { aspect-ratio: 4 / 3; }
+.foto-img--alta { aspect-ratio: 3 / 4; }
+.galeria { margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.galeria figcaption { font-size: 13px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--cinza); }
+
+/* Bloco no lugar da foto do card de Cardio */
+.card__destaque { margin-top: auto; aspect-ratio: 4 / 3; background: var(--vermelho); color: #fff; display: flex; flex-direction: column; justify-content: flex-end; padding: 24px; }
+.card__destaque span { font-weight: 800; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; }
+.card__destaque strong { font-weight: 900; font-size: clamp(56px, 7vw, 88px); line-height: 1; letter-spacing: -2px; }
+
 /* ---------- Letreiro animado ---------- */
 .letreiro { background: var(--vermelho); color: #fff; overflow: hidden; }
 .letreiro__trilho { display: flex; width: max-content; padding: 14px 0; font-weight: 900; font-size: 24px; letter-spacing: 2px; white-space: nowrap; animation: rolar 28s linear infinite; }
