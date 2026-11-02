@@ -29,13 +29,15 @@ window.SOFIT = {
   // Aulas coletivas por dia (a musculação entra sozinha, pelo funcionamento).
   aulas: {
     0: [],
-    1: [{ hora: '18:30', nome: 'Spinning', obs: 'Agende pelo app Next Fit, 2h antes' }],
-    2: [{ hora: '06:30', nome: 'Spinning', obs: 'Agende pelo app Next Fit, 2h antes' }],
-    3: [
+    1: [
       { hora: '08:00', nome: 'Cardio', obs: 'Com a Prof. Ketley' },
-      { hora: '18:30', nome: 'Spinning', obs: 'Agende pelo app Next Fit, 2h antes' }
+      { hora: '18:30', nome: 'Spinning', obs: 'Agende pelo app Next Fit, 2h antes' }],
+    2: [{ hora: '18:30', nome: 'Spinning', obs: 'Agende pelo app Next Fit, 2h antes' }],
+    3: [
+      
+      { hora: '06:00', nome: 'Spinning', obs: 'Agende pelo app Next Fit, 2h antes' }
     ],
-    4: [{ hora: '06:30', nome: 'Spinning', obs: 'Agende pelo app Next Fit, 2h antes' }],
+    4: [{ hora: '06:00', nome: 'Spinning', obs: 'Agende pelo app Next Fit, 2h antes' }],
     5: [],
     6: []
   },
