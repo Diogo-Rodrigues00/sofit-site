@@ -32,7 +32,7 @@ window.SOFIT = {
     1: [{ hora: '18:30', nome: 'Spinning', obs: 'Agende pelo app Next Fit, 2h antes' }],
     2: [{ hora: '06:30', nome: 'Spinning', obs: 'Agende pelo app Next Fit, 2h antes' }],
     3: [
-      { hora: '18:20', nome: 'Cardio', obs: 'Com o Prof. Diogo' },
+      { hora: '08:00', nome: 'Cardio', obs: 'Com a Prof. Ketley' },
       { hora: '18:30', nome: 'Spinning', obs: 'Agende pelo app Next Fit, 2h antes' }
     ],
     4: [{ hora: '06:30', nome: 'Spinning', obs: 'Agende pelo app Next Fit, 2h antes' }],
